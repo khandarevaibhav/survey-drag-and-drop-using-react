@@ -1,0 +1,7 @@
+{
+    "api": {
+        "formApi": "http://localhost:5000/form",
+        
+        "resApi": "http://localhost:5000/response"
+    }
+}
