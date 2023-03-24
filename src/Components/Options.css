@@ -1,0 +1,115 @@
+.crudButtons {
+    background-color: white;
+    color: #848b96;
+    width: 19px;
+    height: 22px;
+}
+
+.otherOptions {
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    background-color: white;
+}
+
+.crudOptions {
+    display: flex;
+    height: 22px;
+    justify-content: space-between;
+    width: 5%;
+    background-color: white;
+}
+
+.newSpan {
+    margin-left: 20px;
+    color: #848b96;
+    border: none;
+    font-size: 1rem;
+}
+
+.newSpan:hover {
+    cursor: pointer;
+}
+
+.line2 {
+    width: 851px;
+    height: 0px;
+    border: 1px solid #e2e7ef;
+    flex: none;
+    order: 2;
+    align-self: stretch;
+    flex-grow: 0;
+    margin-top: 26px;
+}
+
+.form {
+    background-color: white;
+}
+
+.mandatoryBtnMain {
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-between;
+    width: 120px;
+    background-color: white;
+}
+
+.mandatoryTxt {
+    background-color: white;
+}
+
+.switch-toggle {
+    height: 40px;
+    background-color: white;
+}
+
+.switch-toggle input[type='checkbox'] {
+    position: absolute;
+    opacity: 0;
+    z-index: -2;
+}
+
+.switch-toggle input[type='checkbox']+label {
+    position: relative;
+    display: inline-block;
+    width: 36px;
+    height: 20px;
+    border-radius: 4px;
+    margin: 0;
+    cursor: pointer;
+    background-color: #b3a1a1;
+    /* box-shadow: inset -8px -8px 15px rgba(255, 255, 255, 0.6),    inset 10px 10px 10px rgba(0, 0, 0, 0.25); */
+}
+
+.switch-toggle input[type='checkbox']:checked+label {
+    background-color: #131ca2;
+}
+
+.switch-toggle input[type='checkbox']+label::before {
+    position: absolute;
+    content: '';
+    font-size: 13px;
+    text-align: center;
+    line-height: 25px;
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    background-color: white;
+    /* background-color: #d1dad3; */
+    /* box-shadow: -3px -3px 5px rgba(255, 255, 255, 0.5),    3px 3px 5px rgba(0, 0, 0, 0.25); */
+    transition: 0.2s ease-in-out;
+}
+
+.switch-toggle input[type='checkbox']:checked+label::before {
+    left: 50%;
+    content: '';
+    /* background-color: white; */
+    /* box-shadow: -3px -3px 5px rgba(255, 255, 255, 0.5), 3px 3px 5px #00b33c; */
+}
+
+.otherOptions {
+    margin-top: 16px;
+}
+

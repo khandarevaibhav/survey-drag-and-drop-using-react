@@ -8,6 +8,9 @@ import SingleChoice from "./Components/SingleChoice";
 import './Components/CreateForm.css'
 import HandleSaveForm from "./Components/HandleSaveForm";
 import formApi from "./Components/API/FormData";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrash, faCheck, faCopy } from "@fortawesome/free-solid-svg-icons";
 // import DeleteIcon from '@mui/icons-material/Delete';
 const counts = {
    
@@ -248,7 +251,7 @@ const CreateForm = (props) => {
                                                  
                                                 <li className="added-elements" key={index}>
                                                     {el}  
-                                                  <button  onClick={() => handleDeleteField(el.props.id)}>  Delete</button>
+                                                  <button className=".publish-btn-div"  onClick={() => handleDeleteField(el.props.id)}>  <FontAwesomeIcon icon={faTrash} /></button>
                                                 </li>
                                             );
                                         })}
@@ -277,6 +280,14 @@ const CreateForm = (props) => {
                                     setShowPreview(true);
                                 }}>
                                     Share  🔗{" "}
+                                </button>
+
+                            </div>
+                            <div className="publish-btn-div">
+                            <button className="publish-btn" onClick={(e) => {
+                                    setShowPreview(true);
+                                }}>
+                                    Save as Draft{" "}
                                 </button>
                             </div>
                         </div>

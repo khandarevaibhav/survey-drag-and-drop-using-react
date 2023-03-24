@@ -1,5 +1,8 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrash, faCheck, faCopy } from "@fortawesome/free-solid-svg-icons";
+import Options from "./Options";
 
 const MultiChoice = (props) => {
   const [options, setOptions] = useState(props.options);
@@ -20,6 +23,11 @@ const MultiChoice = (props) => {
 
   const handleLabelChange = (e) => {
     setLabel(e.target.value);
+  };
+  const handleDeleteField = (id) => {
+    setOptions((prevFields) =>
+      prevFields.filter((field) => field.id !== id)
+    );
   };
 
   useEffect(() => {
@@ -55,7 +63,18 @@ const MultiChoice = (props) => {
                   placeholder="Enter your option"
                   onChange={handleOptionChange}
                 />
+                
               </label>
+              <button
+                    key={index}
+                    id={index}
+                    onClick={() => handleDeleteField(op.id)}
+                    className="span newSpan"><FontAwesomeIcon icon={faTrash} />
+                    {/* <FontAwesomeIcon icon={faTrash} /> */}
+
+                  </button>
+                  <Options/>
+
             </div>
           );
         })}

@@ -161,3 +161,22 @@
     text-indent: 5px;
   }
   ol>li {box-sizing:border-box;}
+   
+
+  .crudButtons {
+    background-color: white;
+    color: #848b96;
+    width: 19px;
+    height: 22px;
+}
+.newSpan {
+  margin-left: 20px;
+  color: #848b96;
+  border: none;
+  font-size: 1rem;
+}
+
+.newSpan:hover {
+  cursor: pointer;
+}
+  

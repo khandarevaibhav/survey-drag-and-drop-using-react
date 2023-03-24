@@ -1,5 +1,8 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
+import Options from "./Options";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrash, faCheck, faCopy } from "@fortawesome/free-solid-svg-icons";
 
 const SingleChoice = (props) => {
   const [options, setOptions] = useState(props.options);
@@ -64,8 +67,8 @@ const SingleChoice = (props) => {
                     key={index}
                     id={index}
                     onClick={() => handleDeleteField(op.id)}
-                    className="span newSpan">delete
-                    {/* <FontAwesomeIcon icon={faTrash} /> */}
+                    className="span newSpan">
+                    <FontAwesomeIcon icon={faTrash} />
                   </button>
             </div>
           );
@@ -74,6 +77,7 @@ const SingleChoice = (props) => {
         <button className="button-60" onClick={handleAddOption}>
           Add Option
         </button>
+        <Options/>
       </div>
     </div>
   );
